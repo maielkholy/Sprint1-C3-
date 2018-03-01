@@ -12,6 +12,12 @@ var productSchema = mongoose.Schema({
     required: true,
     min: 0
   },
+  sellerName: {
+    type: String,
+    required: false,
+    trim: true,
+    lowercase: true
+  },
   createdAt: {
     type: Date,
     default: Date.now

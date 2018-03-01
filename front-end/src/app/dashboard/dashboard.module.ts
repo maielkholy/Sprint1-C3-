@@ -4,13 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { DashboardComponent } from './dashboard.component';
-// import { StoreComponent } from './store/store.component';
+import { LoginComponent } from './auth/login/login.component';
+import { FoodComponent } from './store/food/food.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { MyitemsComponent } from './myitems/myitems.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   imports: [ThemeModule,
             DashboardRoutingModule,
             FormsModule],
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent,LoginComponent,FoodComponent,SignupComponent,MyitemsComponent],
   entryComponents: [],
   providers: []
 })
