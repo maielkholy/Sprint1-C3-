@@ -1,0 +1,56 @@
+[{
+	"_id": {
+		"$oid": "5a998df13fe4335db8302cf9"
+	},
+	"name": "pasta",
+	"price": 50,
+	"seller": "mai",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T17:46:25.796Z"
+	},
+	"__v": 0,
+	"updatedAt": {
+		"$date": "2018-03-02T17:54:35.132Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "5a998ed23fe4335db8302cfa"
+	},
+	"name": "pizza",
+	"price": 65,
+	"seller": "mai",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T17:50:10.363Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a998f573fe4335db8302cfc"
+	},
+	"name": "burger",
+	"price": 75,
+	"seller": "mai",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T17:52:23.596Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a998fa53fe4335db8302cfd"
+	},
+	"name": "chicken wings",
+	"price": 60,
+	"seller": "mai",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T17:53:41.743Z"
+	},
+	"__v": 0
+}]
+
