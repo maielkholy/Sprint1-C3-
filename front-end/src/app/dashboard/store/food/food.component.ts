@@ -3,12 +3,13 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { FoodService } from './food.service'
 @Component({
   selector: 'app-food',
-  template: '<ng2-smart-table [settings]="settings" [source]="data" (createConfirm)="onCreateCall($event)" (editConfirm)="onEditCall($event)" ></ng2-smart-table>',
+  template: '<ng2-smart-table [settings]="settings" [source]="data" (createConfirm)="onCreateCall($event)" (editConfirm)="onEditCall($event)" (deleteConfirm)= "onDeleteCall($event)" ></ng2-smart-table>',
   providers: [FoodService]
 })
-// <ng2-smart-table [settings]="settings"></ng2-smart-table>
+
 export class FoodComponent implements OnInit {
   settings = {
+
     add: {
       confirmCreate: true,
     },
@@ -16,6 +17,7 @@ export class FoodComponent implements OnInit {
       confirmSave: true,
     },
     columns: {
+
       name: {
         title: 'Product Name'
       },
@@ -31,6 +33,10 @@ export class FoodComponent implements OnInit {
       comp: {
         title: 'Component Name'
       },
+      _id: {
+        title: 'id',
+        show: false
+      },
     }
   };
 
@@ -44,7 +50,11 @@ export class FoodComponent implements OnInit {
   }
   onEditCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.updateProduct(event.newData.name, event.newData.price).subscribe();
+       this.foodService.updateProduct(event.newData._id ,event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
+  }
+  onDeleteCall(event){
+    event.confirm.resolve(event.newData);
+    this.foodService.deleteProduct(event.newData._id).subscribe();
   }
   ngOnInit() {
     this.foodService.getProducts().subscribe(
@@ -55,5 +65,6 @@ export class FoodComponent implements OnInit {
       }
     );
    }
+
 
 }

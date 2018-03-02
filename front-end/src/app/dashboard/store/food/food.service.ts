@@ -15,8 +15,11 @@ export class FoodService {
     return this.httpClient.get(environment.apiUrl + 'product/getProducts');
   }
 
-  updateProduct(name:string, price:number) {
-    return this.httpClient.patch(environment.apiUrl + 'product/updateProduct/:productId', {'name':name,'price':price});
+  updateProduct(pid: object,name:string, price:number,sellerName:string, comp: string ) {
+    return this.httpClient.patch(environment.apiUrl + 'product/updateProduct/'+pid, {'name':name,'price':price,'sellerName':sellerName,'comp':comp});
   }
 
+deleteProduct(pid:object){
+  return this.httpClient.delete(environment.apiUrl +'/product/deleteProduct/' +pid )
+}
 }
