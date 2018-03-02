@@ -8,18 +8,18 @@ export class FoodService {
   constructor(private httpClient: HttpClient) { }
 
   createProduct(name:string, price:number,sellerName:string , comp: string) {
-    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price,'sellerName':sellerName,'comp':comp});
+    return this.httpClient.post(environment.apiUrl + 'c3/createProduct', {'name':name, 'price':price,'sellerName':sellerName,'comp':comp});
   }
 
   getProducts(){
-    return this.httpClient.get(environment.apiUrl + 'product/getProducts');
+    return this.httpClient.get(environment.apiUrl + 'c3/getProducts');
   }
 
   updateProduct(pid: object,name:string, price:number,sellerName:string, comp: string ) {
-    return this.httpClient.patch(environment.apiUrl + 'product/updateProduct/'+pid, {'name':name,'price':price,'sellerName':sellerName,'comp':comp});
+    return this.httpClient.patch(environment.apiUrl + 'c3/updateProduct/'+pid, {'name':name,'price':price,'sellerName':sellerName,'comp':comp});
   }
 
-deleteProduct(id:object){
-  return this.httpClient.delete(environment.apiUrl +'product/deleteProduct/' +id );
+  deleteProduct(id:object){
+    return this.httpClient.delete(environment.apiUrl +'c3/deleteProduct/' +id );
 }
 }

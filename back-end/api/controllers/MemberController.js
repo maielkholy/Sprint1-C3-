@@ -123,7 +123,7 @@ module.exports.deleteMember = function(req, res, next) {
       data: null
     });
   }
-  Product.findByIdAndRemove(req.params.MemberId).exec(function(
+  c3.findByIdAndRemove(req.params.MemberId).exec(function(
     err,
     deletedMember
   ) {
