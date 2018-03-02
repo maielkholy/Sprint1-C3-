@@ -24,7 +24,13 @@ export class FoodComponent implements OnInit {
       },
       createdAt: {
         title: 'Created At'
-      }
+      },
+      sellerName: {
+        title: 'Seller Name'
+      },
+      comp: {
+        title: 'Component Name'
+      },
     }
   };
 
@@ -34,7 +40,7 @@ export class FoodComponent implements OnInit {
   }
   onCreateCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.createProduct(event.newData.name, event.newData.price).subscribe();
+       this.foodService.createProduct(event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
   }
   onEditCall(event){
        event.confirm.resolve(event.newData);
@@ -42,8 +48,9 @@ export class FoodComponent implements OnInit {
   }
   ngOnInit() {
     this.foodService.getProducts().subscribe(
-      (res: Response) => {
+      (res: any) => {
         console.log(res)
+        if(res.hasOwnProperty('data'))
         this.data = res.data;
       }
     );

@@ -7,8 +7,8 @@ export class FoodService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createProduct(name:string, price:number) {
-    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price});
+  createProduct(name:string, price:number,sellerName:string , comp: string) {
+    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price,'sellerName':sellerName,'comp':comp});
   }
 
   getProducts(){
