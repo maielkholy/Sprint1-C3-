@@ -1,0 +1,66 @@
+[{
+	"_id": {
+		"$oid": "5a999457c1294314135390ad"
+	},
+	"name": "pizza",
+	"price": 80,
+	"seller": "hanien ahmed",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T18:13:43.577Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a999499c1294314135390ae"
+	},
+	"name": "pepsi",
+	"price": 10,
+	"seller": "hanien ahmed",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T18:14:49.642Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a9994bcc1294314135390af"
+	},
+	"name": "pasta",
+	"price": 6,
+	"seller": "hanien ahmed",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T18:15:24.410Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a9994f3c1294314135390b0"
+	},
+	"name": "chepsi",
+	"price": 10,
+	"seller": "hanien ahmed",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T18:16:19.944Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a999562c1294314135390b1"
+	},
+	"name": "sandwich",
+	"price": 30,
+	"seller": "hanien ahmed",
+	"component": "c3",
+	"createdAt": {
+		"$date": "2018-03-02T18:18:10.870Z"
+	},
+	"__v": 0
+}]
+
