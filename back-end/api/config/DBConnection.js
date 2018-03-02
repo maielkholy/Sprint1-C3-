@@ -2,8 +2,7 @@ var mongoose = require('mongoose'),
   config = require('../config/Config'),
   dburl = config.MONGO_URI;
 
-// CAPTURE APP TERMINATION / RESTART EVENTS
-// To be called when process is restarted or terminated
+
 var gracefulShutdown = function(callback) {
   mongoose.connection.close(function(err) {
     callback(err);
